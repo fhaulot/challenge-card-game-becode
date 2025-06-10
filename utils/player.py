@@ -20,14 +20,43 @@ A fill_deck() method that will fill cards with a complete card game (an instance
 A shuffle() method that will shuffle all the list of cards.
 A distribute() that will take a list of Player as parameter and will distribute the cards evenly between all the players."""
 
-from card.py import Card
-
-turn_count = int(0)
-number_of_cards = int(0)
-history = Card[(contain all the cards played by the player)]
-
+from card import Card
 from typing import List
 from random import shuffle
+
+class Player :
+    def __init__(self):
+        self.cards : list(Card) = []
+        self.turn_count : int = 0
+        self.number_of_cards : int = 0
+        self.history : list(Card) = []
+    
+    def play() : 
+        
+
+
+class Deck : 
+    
+    def __init__(self):
+        self.deck : list[Card]= []
+        
+    
+    def fill_deck(self) :
+        icons = [("red","♥"),("red","♦"),("black","♣"), ("black","♠")]
+        values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+        for color, icon in icons  : 
+            for value in values : 
+                card = Card(color, icon, value)
+                self.deck.append(card)
+    
+    def shuffle(self) : 
+        return shuffle(self.deck)
+    
+    def distribute(self) :
+        return 
+
+
+
 
 
 
